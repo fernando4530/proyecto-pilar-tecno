@@ -1,15 +1,18 @@
-
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import LandingPage from "./components/LandingPage"
+import Navbar from "./components/Navbar";
 import './App.css'
 
 function App() {
-
   return (
-    
-      <div>
-        <p className="text-black text-center text-5xl"> HOLA MUNDO</p>
-      </div>
-      
-  )
+    <Layout>
+      <Navbar />
+      <Routes>
+        <Route path="/" Component={LandingPage} />
+      </Routes>
+    </Layout>
+  );
 }
 
-export default App
+export default App;
