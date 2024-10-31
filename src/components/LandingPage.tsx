@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { Avatar, Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
-import Icon from "@mdi/react";
-import { mdiPencilPlusOutline, mdiSchoolOutline } from "@mdi/js";
 
 const LandingPage = () => {
   return (
@@ -33,202 +31,227 @@ const LandingPage = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2.3, duration: 1, ease: "easeInOut" }}
+          transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
           whileHover={{
             scale: 1.05,
             transition: { duration: 0.3, ease: "easeInOut" },
           }}
-          className="mx-4 ml-2"
+          className="p-8"
         >
-          <Card
-            isBlurred
-            style={{
-              backgroundImage: "url('/space1.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            className="border-3xl py-8 px-4 rounded-3xl ml-8 border-2 border-white border-opacity-40 relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-secondary opacity-10 rounded-3xl z-0"></div>
+          <div className="flex m-auto w-6/6 ">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 3.3, duration: 1, ease: "easeInOut" }}
+              transition={{ delay: 2, duration: 1, ease: "easeInOut" }}
               className="text-left flex md:flex-row items-center"
             >
-              <div className="flex flex-col ml-8 border-2 border-white bg-white border-opacity-80 bg-opacity-10 rounded-3xl p-4">
-                <h2
-                  className="font-fredoka text-5xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-400"
-                  style={{
-                    filter: "drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.6))",
-                  }}
-                >
+              <div className="">
+                <h2 className="font-fredoka text-6xl mb-4 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
                   DESPEGÁ TU CARRERA
                 </h2>
-                <h2 className="text-white font-fredoka text-4xl mt-2 mb-2">
+                <h2 className="text-white font-fredoka text-5xl mt-2 mb-2">
                   y formá parte de la Industria IT!
                 </h2>
               </div>
-              <div className="mr-2">
-                <motion.img
-                  src="/girl-rocket.png"
-                  alt="Web"
-                  className="w-auto h-36 ml-4"
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="flex justify-center m-auto space-x-16 mb-80 w-5/6">
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ amount: 0.5 }}
+          transition={{ delay: 2.5 }}
+          className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80"
+        >
+          <img
+            src="/stamp.png"
+            alt="Stamp"
+            className="absolute -top-12 -right-20 w-52 h-52 transform -scale-x-100"
+            style={{ zIndex: 10, transform: "scaleX(-1)" }}
+          />
+          <Card
+            isBlurred
+            className="relative p-4"
+            style={{
+              background:
+                "linear-gradient(to left, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+            }}
+          >
+            <CardHeader className="flex flex-col bg-white bg-opacity-5 p-4">
+              <div
+                className="flex flex-row justify-center items-center rounded-full bg-warning w-3/4 mb-8 py-1"
+                style={{
+                  background:
+                    "linear-gradient(to left, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(251, 191, 36, 0.8))",
+                }}
+              >
+                <img
+                  src="/hat.png"
+                  alt="Hat"
+                  className="w-auto h-16"
                   style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+                    filter: "drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8))",
                   }}
-                  whileHover={{
-                    rotate: [0, 30, -30, 0],
-                    transition: { duration: 1.5, ease: "easeInOut" },
+                />
+                <h3 className="text-4xl text-white font-fredoka mb-2 ml-2">
+                  Curso de <br /> Desarrollo Web
+                </h3>
+              </div>
+              <Divider
+                orientation="horizontal"
+                className="h-2 rounded-full w-3/4"
+                style={{
+                  background:
+                    "linear-gradient(to left, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(251, 191, 36, 0.8))",
+                }}
+              />
+            </CardHeader>
+            <CardBody className="flex flex-row items-center justify-center space-x-4 rounded-b-2xl bg-white bg-opacity-5">
+              <div
+                className="rounded-3xl border-2 border-warning border-opacity-40 shadow-lg"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(251, 191, 36, 0.3))",
+                }}
+              >
+                <img
+                  src="/web.png"
+                  alt="Web"
+                  className="w-auto h-44"
+                  style={{
+                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.6))",
                   }}
                 />
               </div>
-            </motion.div>
+
+              <div
+                className="space-y-1 p-6 rounded-3xl border-2 border-warning border-opacity-40 shadow-lg ml-4"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(251, 191, 36, 0.3))",
+                }}
+              >
+                <p className="text-xl text-white font-nunito font-semibold ml-2">
+                  Dictado a distancia (Virtual)
+                </p>
+                <p className="text-xl text-white font-nunito font-semibold ml-2">
+                  Mínimos conocimientos
+                </p>
+                <p className="text-xl text-white font-nunito font-semibold ml-2">
+                  Clases en vivo y grabadas
+                </p>
+                <p className="text-xl text-white font-nunito font-semibold ml-2">
+                  Proyectos prácticos reales
+                </p>
+              </div>
+            </CardBody>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ delay: 2.8 }}
+          className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80"
+        >
+          <img
+            src="/stamp.png"
+            alt="Stamp"
+            className="absolute -top-12 -right-20 w-52 h-52 transform -scale-x-100"
+            style={{ zIndex: 10, transform: "scaleX(-1)" }}
+          />
+          <Card
+            isBlurred
+            className="relative p-4"
+            style={{
+              background:
+                "linear-gradient(to left, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+            }}
+          >
+            <CardHeader className="flex flex-col bg-white bg-opacity-5 p-4">
+              <div
+                className="flex flex-row justify-center items-center rounded-full bg-warning mx-2 w-3/5 mb-8 py-1"
+                style={{
+                  background:
+                    "linear-gradient(to left, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(251, 191, 36, 0.8))",
+                }}
+              >
+                <img
+                  src="/contract.png"
+                  alt="Contract"
+                  className="w-auto h-16"
+                  style={{
+                    filter: "drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8))",
+                  }}
+                />
+                <h3 className="text-4xl text-white font-fredoka mb-2 ml-2">
+                  Estudiá <br /> 100% Gratis
+                </h3>
+              </div>
+              <Divider
+                orientation="horizontal"
+                className="h-2 rounded-full w-3/5"
+                style={{
+                  background:
+                    "linear-gradient(to left, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(251, 191, 36, 0.8))",
+                }}
+              />
+            </CardHeader>
+
+            <CardBody className="flex flex-row items-center justify-center space-x-4 rounded-b-2xl bg-white bg-opacity-5">
+              <div
+                className="rounded-3xl border-2 border-warning border-opacity-40 shadow-lg"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(251, 191, 36, 0.3))",
+                }}
+              >
+                <img
+                  src="/boy-idea.png"
+                  alt="Boy Idea"
+                  className="w-auto h-44"
+                  style={{
+                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.4))",
+                  }}
+                />
+              </div>
+
+              <div
+                className="space-y-1 p-6 rounded-3xl border-2 border-warning border-opacity-40 shadow-lg ml-4"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(251, 191, 36, 0.3))",
+                }}
+              >
+                <p className="text-xl text-white font-nunito font-semibold ml-2">
+                  Mínimos requisitos
+                </p>
+                <p className="text-xl text-white font-nunito font-semibold ml-2">
+                  Formate como profesional
+                </p>
+
+                <p className="text-xl text-white font-nunito font-semibold ml-2">
+                  Certificado de finalización
+                </p>
+
+                <p className="text-xl text-white font-nunito font-semibold ml-2">
+                  Conexión con bolsas de trabajo
+                </p>
+              </div>
+            </CardBody>
           </Card>
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 5, duration: 1 }}
-        className="flex justify-center m-auto space-x-8 mb-96 w-5/6"
-      >
-        <Card
-          isBlurred
-          className="w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary mr-8"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
-          }}
-        >
-          <CardHeader className="flex-col  bg-white bg-opacity-5">
-            <div className="flex flex-row justify-center items-center mb-2">
-              <div className="items-center justify-center p-2 bg-secondary bg-opacity-60 rounded-full">
-                <Icon path={mdiSchoolOutline} color="white" size={1.5} />
-              </div>
-              <h3 className="text-4xl text-white font-fredoka mb-2 ml-2">
-                Cursos de Desarrollo Web
-              </h3>
-            </div>
-            <Divider
-              orientation="horizontal"
-              className="h-1 rounded-full "
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 192, 203, 0.8))",
-              }}
-            />
-          </CardHeader>
-          <CardBody className="flex flex-row items-center space-x-4 rounded-b-2xl bg-white bg-opacity-5">
-            <div
-              className="h-auto rounded-3xl border-2 border-secondary shadow-lg ml-4"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(255, 192, 203, 0.4))",
-              }}
-            >
-              <img
-                src="/web.png"
-                alt="Web"
-                className="w-auto h-36 "
-                style={{
-                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
-                }}
-              />
-            </div>
-
-            <div className="space-y-2">
-              <p className="text-xl text-white font-nunito font-light ml-2">
-                Dictado a distancia (modalidad Virtual)
-              </p>
-              <p className="text-xl text-white font-nunito font-light ml-2">
-                Mínimos conocimientos de programación
-              </p>
-              <p className="text-xl text-white font-nunito font-light ml-2">
-                Clases en vivo y grabadas
-              </p>
-              <p className="text-xl text-white font-nunito font-light ml-2">
-                Proyectos prácticos reales
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-
-        <Card
-          isBlurred
-          className="w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
-          }}
-        >
-          <CardHeader className="flex-col bg-white bg-opacity-5">
-            <div className="flex flex-row justify-center items-center mb-2">
-              <div className="items-center justify-center p-2 bg-secondary bg-opacity-60 rounded-full">
-                <Icon path={mdiPencilPlusOutline} color="white" size={1.5} />
-              </div>
-              <h3 className="text-4xl text-white font-fredoka mb-2 ml-2">
-                Inscríbete totalmente Gratis
-              </h3>
-            </div>
-            <Divider
-              orientation="horizontal"
-              className="h-1 rounded-full "
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 192, 203, 0.8))",
-              }}
-            />
-          </CardHeader>
-          <CardBody className="flex flex-row items-center space-x-4 rounded-b-2xl bg-white bg-opacity-5">
-            <div
-              className="h-auto rounded-3xl border-2 border-secondary shadow-lg ml-4"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(255, 192, 203, 0.4))",
-              }}
-            >
-              <img
-                src="/boy-idea.png"
-                alt="Boy Idea"
-                className="w-auto h-36 "
-                style={{
-                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
-                }}
-              />
-            </div>
-
-            <div className="space-y-2">
-              <p className="text-xl text-white font-nunito font-light ml-2">
-                Mínimos requisitos
-              </p>
-              <p className="text-xl text-white font-nunito font-light ml-2">
-                Formate como profesional
-              </p>
-
-              <p className="text-xl text-white font-nunito font-light ml-2">
-                Certificado de finalización
-              </p>
-
-              <p className="text-xl text-white font-nunito font-light ml-2">
-                Conexión con bolsas de trabajo
-              </p>
-            </div>
-          </CardBody>
-        </Card>
-      </motion.div>
-
-      <div className="text-center mb-96 ">
-        <div className="flex mb-36 m-auto w-4/6 bg-secondary bg-opacity-5 relative rounded-3xl border-2 border-white border-opacity-5">
-          <div className="w-2/3 p-6">
+      <div className="text-center mb-96">
+        <div className="flex mb-80 m-auto w-4/6 bg-secondary bg-opacity-5 relative rounded-3xl border-2 border-white border-opacity-5">
+          <div className="w-2/3 p-6 items-center justify-center">
             <div className="flex flex-row items-center justify-center mb-4">
-              <h2
-                className="text-4xl font-semibold font-fredoka text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-400"
-                style={{
-                  filter: "drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.2))",
-                }}
-              >
+              <h2 className="text-4xl font-semibold font-fredoka text-warning-400">
                 ¿Por qué elegir PILAR TECNO?
               </h2>
               <div className="flex items-center ml-4">
@@ -241,13 +264,13 @@ const LandingPage = () => {
             </div>
             <Divider
               orientation="horizontal"
-              className="h-1 rounded-full mb-4"
+              className="h-2 rounded-full mb-4 w-5/6 m-auto"
               style={{
                 background:
-                  "linear-gradient(to right, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(255, 192, 203, 0.8))",
+                  "linear-gradient(to left, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(251, 191, 36, 0.8))",
               }}
             />
-            <p className="text-2xl font-fredoka text-white mb-6">
+            <p className="text-2xl font-fredoka m-auto text-white mt-4 mb-6 w-5/6">
               Somos tu puerta de entrada al mundo IT con educación de calidad y
               gratuita. Acompañamos tu crecimiento y nos aseguramos que
               adquieras el perfil requerido en el sector.
@@ -272,92 +295,175 @@ const LandingPage = () => {
           </div>
         </div>
 
+        <div>
+          <h2 className="text-white text-3xl text-center font-fredoka mb-12">
+            En nuestro programa encontrarás:
+          </h2>
+        </div>
+
         <div className="flex justify-center">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card
-              isBlurred
-              className="rounded-3xl border-2 border-white border-opacity-5"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(75, 0, 130, 0.06), rgba(128, 0, 128, 0.06), rgba(255, 192, 203, 0.06))",
-              }}
-            >
-              <CardHeader className="flex flex-col">
-                <img
-                  src="/teacher.png"
-                  alt="Web"
-                  className="w-auto h-36"
+          <div className="flex justify-center m-auto space-x-16 mb-96 w-4/6">
+            <div className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80">
+              <Card
+                isBlurred
+                className="relative p-2"
+                style={{
+                  background:
+                    "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                }}
+              >
+                <CardHeader className="flex flex-col mb-2">
+                  <div
+                    className="rounded-3xl border-2 border-warning border-opacity-40 shadow-lg mb-4"
+                    style={{
+                      background:
+                        "linear-gradient(to bottom, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(251, 191, 36, 0.3))",
+                    }}
+                  >
+                    <img
+                      src="/teacher.png"
+                      alt="Teacher"
+                      className="w-auto h-36"
+                      style={{
+                        filter:
+                          "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+                      }}
+                    />
+                  </div>
+                  <h3 className="text-3xl font-fredoka text-center font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
+                    Instructores Expertos
+                  </h3>
+                  <Divider
+                    orientation="horizontal"
+                    className="h-2 rounded-full w-2/4 mb-2"
+                    style={{
+                      background:
+                        "linear-gradient(to left, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(251, 191, 36, 0.8))",
+                    }}
+                  />
+                </CardHeader>
+                <CardBody
+                  className="bg-opacity 5 rounded-2xl border-2 border-warning border-opacity-40 shadow-lg p-4 mb-2"
                   style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+                    background:
+                      "linear-gradient(to left, rgba(75, 0, 130, 0.15), rgba(128, 0, 128, 0.15), rgba(251, 191, 36, 0.15))",
                   }}
-                />
-                <h3 className="text-2xl font-fredoka text-center text-white font-semibold mb-2">
-                  Instructores Expertos
-                </h3>
-              </CardHeader>
-              <CardBody>
-                <p className="text-xl text-center font-fredoka text-white">
-                  Aprende de profesionales con experiencia en la industria.
-                </p>
-              </CardBody>
-            </Card>
+                >
+                  <p className="text-xl text-center font-fredoka text-white">
+                    Aprenderás de profesionales calificados y con experiencia en
+                    la industria.
+                  </p>
+                </CardBody>
+              </Card>
+            </div>
 
-            <Card
-              isBlurred
-              className="rounded-3xl border-2 border-white border-opacity-5"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(75, 0, 130, 0.06), rgba(128, 0, 128, 0.06), rgba(255, 192, 203, 0.06))",
-              }}
-            >
-              <CardHeader className="flex flex-col">
-                <img
-                  src="/content.png"
-                  alt="Web"
-                  className="w-auto h-36"
+            <div className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80">
+              <Card
+                isBlurred
+                className="relative p-2"
+                style={{
+                  background:
+                    "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                }}
+              >
+                <CardHeader className="flex flex-col mb-2 px-0">
+                  <div
+                    className="rounded-3xl border-2 border-warning border-opacity-40 shadow-lg p-2 mb-4"
+                    style={{
+                      background:
+                        "linear-gradient(to bottom, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(251, 191, 36, 0.3))",
+                    }}
+                  >
+                    <img
+                      src="/content.png"
+                      alt="Content"
+                      className="w-auto h-32"
+                      style={{
+                        filter:
+                          "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+                      }}
+                    />
+                  </div>
+                  <h3 className="w-full text-3xl font-fredoka text-center font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
+                    Contenido Actualizado
+                  </h3>
+                  <Divider
+                    orientation="horizontal"
+                    className="h-2 rounded-full w-2/4 mb-2"
+                    style={{
+                      background:
+                        "linear-gradient(to left, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(251, 191, 36, 0.8))",
+                    }}
+                  />
+                </CardHeader>
+                <CardBody
+                  className="bg-opacity 5 rounded-2xl border-2 border-warning border-opacity-40 shadow-lg p-4 mb-2"
                   style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+                    background:
+                      "linear-gradient(to left, rgba(75, 0, 130, 0.15), rgba(128, 0, 128, 0.15), rgba(251, 191, 36, 0.15))",
                   }}
-                />
-                <h3 className="text-2xl font-fredoka text-center text-white font-semibold mb-2">
-                  Contenido Actualizado
-                </h3>
-              </CardHeader>
-              <CardBody>
-                <p className="text-xl text-center font-fredoka text-white">
-                  Nuestro programa se adapta a las últimas tendencias del
-                  mercado.
-                </p>
-              </CardBody>
-            </Card>
+                >
+                  <p className="text-xl text-center font-fredoka text-white">
+                    Nuestro programa se adapta a las últimas tendencias del
+                    mercado.
+                  </p>
+                </CardBody>
+              </Card>
+            </div>
 
-            <Card
-              isBlurred
-              className="rounded-3xl border-2 border-white border-opacity-5"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(75, 0, 130, 0.06), rgba(128, 0, 128, 0.06), rgba(255, 192, 203, 0.06))",
-              }}
-            >
-              <CardHeader className="flex flex-col">
-                <img
-                  src="/connections.png"
-                  alt="Web"
-                  className="w-auto h-36"
+            <div className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80">
+              <Card
+                isBlurred
+                className="relative p-2"
+                style={{
+                  background:
+                    "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                }}
+              >
+                <CardHeader className="flex flex-col mb-2">
+                  <div
+                    className="rounded-3xl border-2 border-warning border-opacity-40 shadow-lg p-2 mb-4"
+                    style={{
+                      background:
+                        "linear-gradient(to bottom, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(251, 191, 36, 0.3))",
+                    }}
+                  >
+                    <img
+                      src="/connections.png"
+                      alt="Connections"
+                      className="w-auto h-32"
+                      style={{
+                        filter:
+                          "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+                      }}
+                    />
+                  </div>
+                  <h3 className="text-3xl font-fredoka text-center font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
+                    Comunidad Activa
+                  </h3>
+                  <Divider
+                    orientation="horizontal"
+                    className="h-2 rounded-full w-2/4 mb-2"
+                    style={{
+                      background:
+                        "linear-gradient(to left, rgba(75, 0, 130, 0.8), rgba(128, 0, 128, 0.8), rgba(251, 191, 36, 0.8))",
+                    }}
+                  />
+                </CardHeader>
+                <CardBody
+                  className="bg-opacity 5 rounded-2xl border-2 border-warning border-opacity-40 shadow-lg p-4 mb-2"
                   style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+                    background:
+                      "linear-gradient(to left, rgba(75, 0, 130, 0.15), rgba(128, 0, 128, 0.15), rgba(251, 191, 36, 0.15))",
                   }}
-                />
-                <h3 className="text-2xl font-fredoka text-center text-white font-semibold mb-2">
-                  Comunidad Activa
-                </h3>
-              </CardHeader>
-              <CardBody>
-                <p className="text-xl text-center font-fredoka text-white">
-                  Conéctate con otros estudiantes y amplía tu red profesional.
-                </p>
-              </CardBody>
-            </Card>
+                >
+                  <p className="text-xl text-center font-fredoka text-white">
+                    Podrás conectar con otros estudiantes y amplíar tu red
+                    profesional.
+                  </p>
+                </CardBody>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
