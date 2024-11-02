@@ -563,7 +563,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col m-auto space-y-8 mb-48">
+        <div className="flex flex-col m-auto space-y-16 mb-48">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -571,9 +571,9 @@ const LandingPage = () => {
             variants={cardVariant}
             className="flex items-center m-auto mb-4"
           >
-            <h2 className="text-white text-xl font-fredoka mr-4">
+            <li className="text-white text-2xl font-fredoka mr-4">
               Te invitamos a que conozcas el equipo de profesionales:
-            </h2>
+            </li>
 
             <Button
               disableRipple
@@ -591,9 +591,9 @@ const LandingPage = () => {
             variants={cardVariant}
             className="flex items-center m-auto"
           >
-            <h2 className="text-white text-xl font-fredoka mr-4">
+            <li className="text-white text-2xl font-fredoka mr-4">
               También te invitamos a que conozcas las últimas novedades:
-            </h2>
+            </li>
 
             <Button
               disableRipple
