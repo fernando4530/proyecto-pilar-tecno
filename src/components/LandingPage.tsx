@@ -571,9 +571,9 @@ const LandingPage = () => {
             variants={cardVariant}
             className="flex items-center m-auto mb-4"
           >
-            <li className="text-white text-2xl font-fredoka mr-4">
+            <h2 className="text-white text-2xl font-fredoka mr-4">
               Te invitamos a que conozcas el equipo de profesionales:
-            </li>
+            </h2>
 
             <Button
               disableRipple
@@ -591,9 +591,9 @@ const LandingPage = () => {
             variants={cardVariant}
             className="flex items-center m-auto"
           >
-            <li className="text-white text-2xl font-fredoka mr-4">
+            <h2 className="text-white text-2xl font-fredoka mr-4">
               También te invitamos a que conozcas las últimas novedades:
-            </li>
+            </h2>
 
             <Button
               disableRipple
