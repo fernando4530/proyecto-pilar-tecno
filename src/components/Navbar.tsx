@@ -28,9 +28,10 @@ const Navbar = () => {
         >
           <Avatar
             src="/logo-pilar1.png"
-            size="md"
+            size="lg"
             className="shadow-[0_0_10px_rgba(255,255,255,0.9)]  "
           />
+          <div className="flex flex-col">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -39,6 +40,16 @@ const Navbar = () => {
           >
             PILAR TECNO
           </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, staggerChildren: 0.1 }}
+            className="md:ml-4 ml-2 text-inherit text-white md:text-sm text-xl font-semi-bold font-fredoka"
+          >
+            E-learning
+          </motion.p>
+          </div>
         </div>
       </NavbarBrand>
       <NavbarContent justify="end" className="md:mr-12">

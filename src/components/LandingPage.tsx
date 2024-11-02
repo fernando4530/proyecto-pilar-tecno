@@ -1,5 +1,26 @@
 import { motion } from "framer-motion";
-import { Avatar, Card, CardBody, CardHeader, Divider } from "@nextui-org/react";
+import {
+  Avatar,
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Divider,
+  Link,
+} from "@nextui-org/react";
+
+const cardVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: i * 0.4,
+      duration: 0.8,
+      ease: "easeInOut",
+    },
+  }),
+};
 
 const LandingPage = () => {
   return (
@@ -60,10 +81,24 @@ const LandingPage = () => {
 
       <div className="flex justify-center m-auto space-x-16 mb-80 w-5/6">
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ amount: 0.5 }}
-          transition={{ delay: 2.5 }}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            boxShadow: "0 0 0 rgba(0, 0, 0, 0)",
+          }}
+          transition={{
+            delay: 2.4,
+            duration: 0.8,
+            ease: "easeInOut",
+            scale: { duration: 0.2 },
+            boxShadow: { duration: 0.2 },
+          }}
+          whileHover={{
+            scale: 1.02,
+            boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
+            transition: { duration: 0.2 },
+          }}
           className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80"
         >
           <img
@@ -152,10 +187,24 @@ const LandingPage = () => {
         </motion.div>
 
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ delay: 2.8 }}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            boxShadow: "0 0 0 rgba(0, 0, 0, 0)",
+          }}
+          transition={{
+            delay: 2.4,
+            duration: 0.8,
+            ease: "easeInOut",
+            scale: { duration: 0.2 },
+            boxShadow: { duration: 0.2 },
+          }}
+          whileHover={{
+            scale: 1.02,
+            boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
+            transition: { duration: 0.2 },
+          }}
           className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80"
         >
           <img
@@ -247,11 +296,17 @@ const LandingPage = () => {
         </motion.div>
       </div>
 
-      <div className="text-center mb-96">
-        <div className="flex mb-80 m-auto w-4/6 bg-secondary bg-opacity-5 relative rounded-3xl border-2 border-white border-opacity-5">
+      <div className="text-center">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.5 }}
+          variants={cardVariant}
+          className="flex mb-80 m-auto w-4/6 bg-secondary bg-opacity-5 relative rounded-3xl border-2 border-white border-opacity-5"
+        >
           <div className="w-2/3 p-6 items-center justify-center">
             <div className="flex flex-row items-center justify-center mb-4">
-              <h2 className="text-4xl font-semibold font-fredoka text-warning-400">
+              <h2 className="text-4xl font-fredoka text-white">
                 ¿Por qué elegir PILAR TECNO?
               </h2>
               <div className="flex items-center ml-4">
@@ -293,17 +348,34 @@ const LandingPage = () => {
               }}
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.5 }}
+          variants={cardVariant}
+        >
           <h2 className="text-white text-3xl text-center font-fredoka mb-12">
             En nuestro programa encontrarás:
           </h2>
-        </div>
+        </motion.div>
 
         <div className="flex justify-center">
-          <div className="flex justify-center m-auto space-x-16 mb-96 w-4/6">
-            <div className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80">
+          <div className="flex justify-center m-auto space-x-16 mb-80 w-4/6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.5 }}
+              variants={cardVariant}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              whileHover={{
+                scale: 1.02,
+                boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
+                transition: { duration: 0.2 },
+              }}
+              className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80"
+            >
               <Card
                 isBlurred
                 className="relative p-2"
@@ -355,9 +427,21 @@ const LandingPage = () => {
                   </p>
                 </CardBody>
               </Card>
-            </div>
+            </motion.div>
 
-            <div className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.5 }}
+              variants={cardVariant}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              whileHover={{
+                scale: 1.02,
+                boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
+                transition: { duration: 0.2 },
+              }}
+              className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80"
+            >
               <Card
                 isBlurred
                 className="relative p-2"
@@ -409,9 +493,21 @@ const LandingPage = () => {
                   </p>
                 </CardBody>
               </Card>
-            </div>
+            </motion.div>
 
-            <div className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ amount: 0.5 }}
+              variants={cardVariant}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              whileHover={{
+                scale: 1.02,
+                boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
+                transition: { duration: 0.2 },
+              }}
+              className="relative w-2/5 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80"
+            >
               <Card
                 isBlurred
                 className="relative p-2"
@@ -463,6 +559,208 @@ const LandingPage = () => {
                   </p>
                 </CardBody>
               </Card>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="flex flex-col m-auto space-y-16 mb-48">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            className="flex items-center m-auto mb-4"
+          >
+            <h2 className="text-white text-2xl font-fredoka mr-4">
+              Te invitamos a que conozcas el equipo de profesionales:
+            </h2>
+
+            <Button
+              disableRipple
+              className="text-white font-fredoka text-xl overflow-visible rounded-full hover:-translate-y-1 px-4 shadow-xl bg-secondary/60 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-secondary/90 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+              size="md"
+            >
+              Let´s go!
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            className="flex items-center m-auto"
+          >
+            <h2 className="text-white text-2xl font-fredoka mr-4">
+              También te invitamos a que conozcas las últimas novedades:
+            </h2>
+
+            <Button
+              disableRipple
+              className="text-white font-fredoka text-xl overflow-visible rounded-full hover:-translate-y-1 px-4 shadow-xl bg-secondary/60 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-secondary/90 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0"
+              size="md"
+            >
+              Let´s go!
+            </Button>
+          </motion.div>
+        </div>
+
+        <div
+          className="w-full py-8"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255, 192, 203, 0.1), rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1))",
+          }}
+        >
+          <div className="max-w-6xl md:mx-auto px-4 md:mb-20 mb-12">
+            <div className="flex flex-wrap justify-between">
+              <div className="w-full flex items-center justify-center mb-8 md:mb-0 md:w-1/5">
+                <span className=" text-white">Pilar Tecno 2024</span>
+              </div>
+
+              <div className="w-1/2 md:w-1/5 mb-8 md:mb-0 text-center">
+                <h5 className="text-secondary-600 font-bold mb-4">LEGAL</h5>
+                <ul className="list-none pl-0 space-y-2">
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Terms
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Privacy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="w-1/2 md:w-1/5 mb-8 md:mb-0 text-center">
+                <h5 className="text-secondary-600 font-bold mb-4">LINKS</h5>
+                <ul className="list-none pl-0 space-y-2">
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Faq
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Help
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Support
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="w-1/2 md:w-1/5 mb-8 md:mb-0 text-center">
+                <h5 className="text-secondary-600 font-bold mb-4">SOCIAL</h5>
+                <ul className="list-none pl-0 space-y-2">
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      LikedIn
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Facebook
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Twitter
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="w-1/2 md:w-1/5 text-center">
+                <h5 className="text-secondary-600 font-bold mb-4">COMPANY</h5>
+                <ul className="list-none pl-0 space-y-2">
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Official Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      isBlock
+                      showAnchorIcon
+                      href="#"
+                      color="secondary"
+                      className="text-white"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
