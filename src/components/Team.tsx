@@ -7,7 +7,15 @@ const Team = () => {
   return (
     <div>
       <div className="flex flex-col justify-center m-auto">
-        <h2 className="text-white text-2xl m-auto mt-48 mb-12">
+        <img
+          src="/no-pass.png"
+          alt="Connections"
+          className="w-48 h-48 m-auto mt-48 mb-4"
+          style={{
+            filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+          }}
+        />
+        <h2 className="text-white text-2xl m-auto mt-4 mb-12">
           Sección en construcción
         </h2>
 
