@@ -23,32 +23,32 @@ const Navbar = () => {
     >
       <NavbarBrand>
         <div
-          className="flex items-center md:ml-10  cursor-pointer"
+          className="flex items-center md:ml-10 cursor-pointer"
           onClick={() => navigate("/")}
         >
           <Avatar
             src="/logo-pilar1.png"
             size="lg"
-            className="shadow-[0_0_10px_rgba(255,255,255,0.9)]  "
+            className="shadow-[0_0_10px_rgba(255,255,255,0.9)] md:w-12 md:h-12 w-8 h-8 "
           />
           <div className="flex flex-col">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.9, staggerChildren: 0.1 }}
-            className="md:ml-4 ml-2 text-inherit text-white md:text-2xl text-xl font-semi-bold font-fredoka"
-          >
-            PILAR TECNO
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9, staggerChildren: 0.1 }}
+              className="md:ml-4 ml-2 text-inherit text-white md:text-2xl text-l font-semi-bold font-fredoka"
+            >
+              PILAR TECNO
+            </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, staggerChildren: 0.1 }}
-            className="md:ml-4 ml-2 text-inherit text-white md:text-sm text-xl font-semi-bold font-fredoka"
-          >
-            E-learning
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, staggerChildren: 0.1 }}
+              className="md:ml-4 ml-2 text-inherit text-white md:text-sm text-xs font-semi-bold font-fredoka"
+            >
+              E-learning
+            </motion.p>
           </div>
         </div>
       </NavbarBrand>
@@ -72,7 +72,7 @@ const Navbar = () => {
               }
               href="#"
               variant="bordered"
-              className="text-xl rounded-2xl font-fredoka font-light py-6 text-white border-opacity-20 hover:border-opacity-70 bg-opacity-20 text-opacity-60 hover:text-white hover:bg-white hover:bg-opacity-5"
+              className="md:text-xl text-l rounded-2xl font-fredoka font-light py-6 md:px-4 px-2 text-white border-opacity-20 hover:border-opacity-70 bg-opacity-20 text-opacity-60 hover:text-white hover:bg-white hover:bg-opacity-5"
               onClick={() => navigate("/Team")}
             >
               The Team
@@ -98,8 +98,9 @@ const Navbar = () => {
               }
               href="#"
               variant="bordered"
-              className="text-xl rounded-2xl font-fredoka font-light py-6 text-white border-opacity-20 hover:border-opacity-70 bg-opacity-20 text-opacity-60 hover:text-white hover:bg-white hover:bg-opacity-5"
-              onClick={() => navigate("/Info")}>
+              className="md:text-xl text-l rounded-2xl font-fredoka font-light py-6 md:px-4 px-2 text-white border-opacity-20 hover:border-opacity-70 bg-opacity-20 text-opacity-60 hover:text-white hover:bg-white hover:bg-opacity-5"
+              onClick={() => navigate("/Info")}
+            >
               + Info
             </NextUIButton>
           </motion.div>
