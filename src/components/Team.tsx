@@ -20,7 +20,7 @@ const cardVariant = {
 };
 
 const sponsors = [
-  { src: "/consejo-fed-inv.png", alt: "Consejo Federal de Inversiones" },
+  //{ src: "/consejo-fed-inv.png", alt: "Consejo Federal de Inversiones" },
   { src: "/logo-gob-larioja.png", alt: "Gobierno de La Rioja" },
   { src: "/polo-tec.png", alt: "Polo Tecnológico" },
 ];
