@@ -2,7 +2,6 @@ import {
   Accordion,
   AccordionItem,
   Divider,
-  Link,
   Table,
   TableBody,
   TableCell,
