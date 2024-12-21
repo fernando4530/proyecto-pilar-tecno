@@ -102,7 +102,7 @@ const LandingPage = () => {
             boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
             transition: { duration: 0.2 },
           }}
-          className="relative md:w-2/5 w-5/6 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80"
+          className="relative md:w-2/5 w-5/6 p-4 shadow-xl rounded-3xl border-4 border-secondary border-opacity-60"
         >
           <img
             src="/stamp.png"
@@ -208,7 +208,7 @@ const LandingPage = () => {
             boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
             transition: { duration: 0.2 },
           }}
-          className="relative md:w-2/5 w-5/6 p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80 md:mt-0 mt-8"
+          className="relative md:w-2/5 w-5/6 p-4 shadow-xl rounded-3xl border-4 border-secondary border-opacity-60 md:mt-0 mt-8"
         >
           <img
             src="/stamp.png"
@@ -366,7 +366,7 @@ const LandingPage = () => {
               boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
               transition: { duration: 0.2 },
             }}
-            className="relative md:w-2/5 w-5/6 m-auto p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80 mb-4"
+            className="relative md:w-2/5 w-5/6 m-auto p-4 shadow-xl rounded-3xl border-4 border-secondary border-opacity-60 mb-4"
           >
             <Card
               isBlurred
@@ -432,7 +432,7 @@ const LandingPage = () => {
               boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
               transition: { duration: 0.2 },
             }}
-            className="relative md:w-2/5 w-5/6 m-auto p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80 mb-4"
+            className="relative md:w-2/5 w-5/6 m-auto p-4 shadow-xl rounded-3xl border-4 border-secondary border-opacity-60 mb-4"
           >
             <Card
               isBlurred
@@ -498,7 +498,7 @@ const LandingPage = () => {
               boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
               transition: { duration: 0.2 },
             }}
-            className="relative md:w-2/5 w-5/6 m-auto p-4 shadow-xl rounded-3xl border-2 border-secondary border-opacity-80 mb-4"
+            className="relative md:w-2/5 w-5/6 m-auto p-4 shadow-xl rounded-3xl border-4 border-secondary border-opacity-60 mb-4"
           >
             <Card
               isBlurred
