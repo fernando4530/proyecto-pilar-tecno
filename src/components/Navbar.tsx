@@ -27,7 +27,7 @@ const Navbar = () => {
           onClick={() => navigate("/")}
         >
           <Avatar
-            src="/logo-pilar1.png"
+            src="/logo-pilar-listo.png"
             size="lg"
             className="shadow-[0_0_10px_rgba(255,255,255,0.9)] md:w-12 md:h-12 w-8 h-8 "
           />
