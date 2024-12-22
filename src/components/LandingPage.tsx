@@ -311,7 +311,7 @@ const LandingPage = () => {
               </h2>
               <div className="flex items-center md:ml-4">
                 <Avatar
-                  src="/logo-pilar1.png"
+                  src="/logo-pilar-listo.png"
                   size="lg"
                   className="shadow-[0_0_10px_rgba(255,255,255,0.9)]"
                 />
