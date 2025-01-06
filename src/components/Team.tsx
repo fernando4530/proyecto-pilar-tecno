@@ -2,7 +2,7 @@
 //import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Card, CardHeader, Divider } from "@nextui-org/react";
+import { Divider } from "@nextui-org/react";
 import Icon from "@mdi/react";
 import { mdiChevronLeftCircle, mdiChevronRightCircle } from "@mdi/js";
 
@@ -26,7 +26,6 @@ const sponsors = [
 ];
 
 const Team = () => {
-  //const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -98,15 +97,9 @@ const Team = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1, ease: "easeInOut" }}
-        className="md:w-3/6 w-5/6 m-auto md:mt-36 md:p-4 md:mb-72 mb-24 bg-secondary bg-opacity-5 relative rounded-3xl border-2 border-white border-opacity-5"
+        className="md:w-3/6 w-5/6 m-auto md:mt-36 md:p-4 md:mb-72 mb-24 relative rounded-3xl"
       >
-        <div
-          className="flex md:flex-row justify-center items-center rounded-3xl p-4 md:mb-8 mb-8"
-          style={{
-            background:
-              "linear-gradient(to left, rgba(75, 0, 130, 0.4), rgba(128, 0, 128, 0.4), rgba(255, 192, 203, 0.4))",
-          }}
-        >
+        <div className="flex md:flex-row justify-center items-center rounded-3xl p-4 md:mb-24 mb-8">
           <div
             className="flex md:flex-row rounded-full md:py-0 md:px-8 md:p-4 p-2 justify-center items-center"
             style={{
@@ -128,557 +121,396 @@ const Team = () => {
           </div>
         </div>
 
-        <h2 className="md:text-xl text-sm text-center text-white font-fredoka md:mb-8 mb-8">
+        <h2 className="md:text-xl text-sm text-center text-white font-fredoka md:mb-16 mb-8">
           Te presentamos el equipo humano a cargo del programa:
         </h2>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.5 }}
-          variants={cardVariant}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          whileHover={{
-            scale: 1.01,
-            boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
-            transition: { duration: 0.2 },
+        <div
+          className="md:w-6/6 rounded-3xl border-2 border-warning border-opacity-40 md:p-4"
+          style={{
+            background:
+              "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
           }}
-          className="md:w-full w-6/6 md:mb-8 m-auto md:p-4 p-2 shadow-xl rounded-3xl border-2 border-secondary border-opacity-40 mb-8"
         >
-          <Card
-            isBlurred
-            className=""
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mt-4 md:mb-8"
             style={{
               background:
-                "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <CardHeader className="flex md:flex-row flex-col md:justify-between md:items-center md:space-x-2">
-              <div
-                className="flex md:flex-col md:w-1/5 md:ml-6 md:p-0 p-2 md:mb-0 mb-4 justify-center items-center rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
+            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+              <img
+                src="/personal-info.png"
+                alt="Personal"
+                className="md:w-12 md:h-12 w-auto h-8"
                 style={{
-                  background:
-                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
                 }}
-              >
-                <h3 className="md:text-3xl text-xl md:mt-3 font-fredoka text-center font-semibold text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
-                  Director
-                </h3>
+              />
+              <p className="text-white font-fredoka md:text-xl text-sm">
+                Director
+              </p>
+            </div>
 
-                <img
-                  src="/personal-info.png"
-                  alt="Personal"
-                  className="md:w-24 md:h-20 w-auto h-16"
-                  style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
-                  }}
-                />
-              </div>
+            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+              <img
+                src="/fernando.jpg"
+                alt="Fernando"
+                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                style={{
+                  filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+                }}
+              />
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Fernando A. Gonzalez
+              </p>
+            </div>
 
-              <div className="md:flex-row md:w-3/4 md:px-4 md:justify-between md:items-center md:space-x-2">
-                <div
-                  className="flex md:flex-row flex-col md:w-full md:p-4 p-2 md:justify-between md:items-center md:space-x-2 rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
-                  }}
-                >
-                  <img
-                    src="/fernando.jpg"
-                    alt="Fernando"
-                    className="md:w-auto md:h-24 w-20 h-20 mt-2 rounded-full md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  />
+            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Software Lead Engineer
+              </p>
+            </div>
 
-                  <div className="flex md:flex-row md:space-x-4 md:text-left text-center mt-4 mb-4">
-                    <h2 className="text-white font-fredoka md:text-1xl md:ml-2">
-                      Fernando Gonzalez
-                    </h2>
-                    <h2 className="text-white font-fredoka md:text-1xl md:text-left">
-                      Software Lead Engineer
-                    </h2>
-                  </div>
-                  <a
-                    href="https://www.linkedin.com/in/fernando-a-gonzalez/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  >
-                    <img
-                      src="/linkedin.png"
-                      alt="Linkedin"
-                      className="w-full h-full object-contain"
-                    />
-                  </a>
-                </div>
-              </div>
-            </CardHeader>
-          </Card>
-        </motion.div>
+            <a
+              href="https://www.linkedin.com/in/fernando-a-gonzalez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
+              style={{
+                filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+              }}
+            >
+              <img
+                src="/linkedin.png"
+                alt="Linkedin"
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.5 }}
-          variants={cardVariant}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          whileHover={{
-            scale: 1.01,
-            boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
-            transition: { duration: 0.2 },
-          }}
-          className="md:w-full w-6/6 md:mb-8 m-auto md:p-4 p-2 shadow-xl rounded-3xl border-2 border-secondary border-opacity-40 mb-8"
-        >
-          <Card
-            isBlurred
-            className=""
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-8"
             style={{
               background:
-                "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <CardHeader className="flex md:flex-row flex-col md:justify-between md:items-center md:space-x-2">
-              <div
-                className="flex md:flex-col md:w-1/5 md:ml-6 md:p-0 p-2 md:mb-0 mb-4 justify-center items-center rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
+            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+              <img
+                src="/personal-info.png"
+                alt="Personal"
+                className="md:w-12 md:h-12 w-auto h-8"
                 style={{
-                  background:
-                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
                 }}
-              >
-                <h3 className="md:text-3xl text-xl md:mt-3 font-fredoka text-center font-semibold text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
-                  Tutora
-                </h3>
+              />
+              <p className="text-white font-fredoka md:text-xl text-sm">
+                Tutor
+              </p>
+            </div>
 
-                <img
-                  src="/personal-info.png"
-                  alt="Personal"
-                  className="md:w-24 md:h-20 w-auto h-16"
-                  style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
-                  }}
-                />
-              </div>
+            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+              <img
+                src="/brenda.jpg"
+                alt="Brenda"
+                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                style={{
+                  filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+                }}
+              />
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Brenda Mollarer
+              </p>
+            </div>
 
-              <div className="md:flex-row md:w-3/4 md:px-4 md:justify-between md:items-center md:space-x-2">
-                <div
-                  className="flex md:flex-row flex-col md:w-full md:p-4 p-2 md:justify-between md:items-center md:space-x-2 rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
-                  }}
-                >
-                  <img
-                    src="/brenda.jpg"
-                    alt="Brenda"
-                    className="md:w-auto md:h-24 w-20 h-20 mt-2 rounded-full md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  />
+            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                SSR Full Stack Developer
+              </p>
+            </div>
 
-                  <div className="flex md:flex-row md:space-x-4 md:text-left text-center mt-4 mb-4">
-                    <h2 className="text-white font-fredoka text-1xl  md:ml-2">
-                      Brenda Mollarer
-                    </h2>
-                    <h2 className="text-white font-fredoka text-1xl md:text-left">
-                      SSR Full Stack Developer
-                    </h2>
-                  </div>
-                  <a
-                    href="https://www.linkedin.com/in/brenda-mollaret/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  >
-                    <img
-                      src="/linkedin.png"
-                      alt="Linkedin"
-                      className="w-full h-full object-contain"
-                    />
-                  </a>
-                </div>
-              </div>
-            </CardHeader>
-          </Card>
-        </motion.div>
+            <a
+              href="https://www.linkedin.com/in/brenda-mollaret/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
+              style={{
+                filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+              }}
+            >
+              <img
+                src="/linkedin.png"
+                alt="Linkedin"
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.5 }}
-          variants={cardVariant}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          whileHover={{
-            scale: 1.01,
-            boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
-            transition: { duration: 0.2 },
-          }}
-          className="md:w-full w-6/6 md:mb-8 m-auto md:p-4 p-2 shadow-xl rounded-3xl border-2 border-secondary border-opacity-40 mb-8"
-        >
-          <Card
-            isBlurred
-            className=""
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-8"
             style={{
               background:
-                "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <CardHeader className="flex md:flex-row flex-col md:justify-between md:items-center md:space-x-2">
-              <div
-                className="flex md:flex-col md:w-1/5 md:ml-6 md:p-0 p-2 md:mb-0 mb-4 justify-center items-center rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
+            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+              <img
+                src="/personal-info.png"
+                alt="Personal"
+                className="md:w-12 md:h-12 w-auto h-8"
                 style={{
-                  background:
-                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
                 }}
-              >
-                <h3 className="md:text-3xl text-xl md:mt-3 font-fredoka text-center font-semibold text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
-                  Tutora
-                </h3>
+              />
+              <p className="text-white font-fredoka md:text-xl text-sm">
+                Tutor
+              </p>
+            </div>
 
-                <img
-                  src="/personal-info.png"
-                  alt="Personal"
-                  className="md:w-24 md:h-20 w-auto h-16"
-                  style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
-                  }}
-                />
-              </div>
+            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+              <img
+                src="/marianela.jpg"
+                alt="Marianela"
+                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                style={{
+                  filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+                }}
+              />
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Marianela Gomez Luna
+              </p>
+            </div>
 
-              <div className="md:flex-row md:w-3/4 md:px-4 md:justify-between md:items-center md:space-x-2">
-                <div
-                  className="flex md:flex-row flex-col md:w-full md:p-4 p-2 md:justify-between md:items-center md:space-x-2 rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
-                  }}
-                >
-                  <img
-                    src="/marianela.jpg"
-                    alt="Marianela"
-                    className="md:w-auto md:h-24 w-20 h-20 mt-2 rounded-full md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  />
+            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                SSR Frontend Developer
+              </p>
+            </div>
 
-                  <div className="flex md:flex-row md:space-x-4 md:text-left text-center mt-4 mb-4">
-                    <h2 className="text-white font-fredoka text-1xl  md:ml-2">
-                      Marianela Gomez Luna
-                    </h2>
-                    <h2 className="text-white font-fredoka text-1xl md:text-left">
-                      SSR Frontend Developer
-                    </h2>
-                  </div>
-                  <a
-                    href="https://www.linkedin.com/in/marianella-gomez-luna/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  >
-                    <img
-                      src="/linkedin.png"
-                      alt="Linkedin"
-                      className="w-full h-full object-contain"
-                    />
-                  </a>
-                </div>
-              </div>
-            </CardHeader>
-          </Card>
-        </motion.div>
+            <a
+              href="https://www.linkedin.com/in/marianella-gomez-luna/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
+              style={{
+                filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+              }}
+            >
+              <img
+                src="/linkedin.png"
+                alt="Linkedin"
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.5 }}
-          variants={cardVariant}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          whileHover={{
-            scale: 1.01,
-            boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
-            transition: { duration: 0.2 },
-          }}
-          className="md:w-full w-6/6 md:mb-8 m-auto md:p-4 p-2 shadow-xl rounded-3xl border-2 border-secondary border-opacity-40 mb-8"
-        >
-          <Card
-            isBlurred
-            className=""
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-8"
             style={{
               background:
-                "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <CardHeader className="flex md:flex-row flex-col md:justify-between md:items-center md:space-x-2">
-              <div
-                className="flex md:flex-col md:w-1/5 md:ml-6 md:p-0 p-2 md:mb-0 mb-4 justify-center items-center rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
+            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+              <img
+                src="/personal-info.png"
+                alt="Personal"
+                className="md:w-12 md:h-12 w-auto h-8"
                 style={{
-                  background:
-                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
                 }}
-              >
-                <h3 className="md:text-3xl text-xl md:mt-3 font-fredoka text-center font-semibold text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
-                  Tutora
-                </h3>
+              />
+              <p className="text-white font-fredoka md:text-xl text-sm">
+                Tutor
+              </p>
+            </div>
 
-                <img
-                  src="/personal-info.png"
-                  alt="Personal"
-                  className="md:w-24 md:h-20 w-auto h-16"
-                  style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
-                  }}
-                />
-              </div>
+            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+              <img
+                src="/patricia.jpg"
+                alt="Patricia"
+                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                style={{
+                  filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+                }}
+              />
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Patricia Salas
+              </p>
+            </div>
 
-              <div className="md:flex-row md:w-3/4 md:px-4 md:justify-between md:items-center md:space-x-2">
-                <div
-                  className="flex md:flex-row flex-col md:w-full md:p-4 p-2 md:justify-between md:items-center md:space-x-2 rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
-                  }}
-                >
-                  <img
-                    src="/patricia.jpg"
-                    alt="Patricia"
-                    className="md:w-auto md:h-24 w-20 h-20 mt-2 rounded-full md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  />
+            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Traductora Profesional
+              </p>
+            </div>
 
-                  <div className="flex md:flex-row md:space-x-4 md:text-left text-center mt-4 mb-4">
-                    <h2 className="text-white font-fredoka text-1xl md:ml-2 mr-4">
-                      Patricia Salas
-                    </h2>
-                    <h2 className="text-white font-fredoka text-1xl md:text-left">
-                      Traductora Profesional
-                    </h2>
-                  </div>
-                  <a
-                    href="https://www.linkedin.com/in/trad-patricia-alejandra-salas/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  >
-                    <img
-                      src="/linkedin.png"
-                      alt="Linkedin"
-                      className="w-full h-full object-contain"
-                    />
-                  </a>
-                </div>
-              </div>
-            </CardHeader>
-          </Card>
-        </motion.div>
+            <a
+              href="https://www.linkedin.com/in/trad-patricia-alejandra-salas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
+              style={{
+                filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+              }}
+            >
+              <img
+                src="/linkedin.png"
+                alt="Linkedin"
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.5 }}
-          variants={cardVariant}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          whileHover={{
-            scale: 1.01,
-            boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
-            transition: { duration: 0.2 },
-          }}
-          className="md:w-full w-6/6 md:mb-8 m-auto md:p-4 p-2 shadow-xl rounded-3xl border-2 border-secondary border-opacity-40 mb-8"
-        >
-          <Card
-            isBlurred
-            className=""
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-8"
             style={{
               background:
-                "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <CardHeader className="flex md:flex-row flex-col md:justify-between md:items-center md:space-x-2">
-              <div
-                className="flex md:flex-col md:w-1/5 md:ml-6 md:p-0 p-2 md:mb-0 mb-4 justify-center items-center rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
+            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+              <img
+                src="/personal-info.png"
+                alt="Personal"
+                className="md:w-12 md:h-12 w-auto h-8"
                 style={{
-                  background:
-                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
                 }}
-              >
-                <h3 className="md:text-3xl text-xl md:mt-3 font-fredoka text-center font-semibold text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
-                  Tutor
-                </h3>
+              />
+              <p className="text-white font-fredoka md:text-xl text-sm">
+                Tutor
+              </p>
+            </div>
 
-                <img
-                  src="/personal-info.png"
-                  alt="Personal"
-                  className="md:w-24 md:h-20 w-auto h-16"
-                  style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
-                  }}
-                />
-              </div>
+            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+              <img
+                src="/sergio.jpg"
+                alt="Sergio"
+                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                style={{
+                  filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+                }}
+              />
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Sergio Martinez
+              </p>
+            </div>
 
-              <div className="md:flex-row md:w-3/4 md:px-4 md:justify-between md:items-center md:space-x-2">
-                <div
-                  className="flex md:flex-row flex-col md:w-full md:p-4 p-2 md:justify-between md:items-center md:space-x-2 rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
-                  }}
-                >
-                  <img
-                    src="/sergio.jpg"
-                    alt="Sergio"
-                    className="md:w-auto md:h-24 w-20 h-20 mt-2 rounded-full md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  />
+            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-8">
+                Licenciado en Psicología, Magister en Administración de Empresas
+              </p>
+            </div>
 
-                  <div className="flex md:flex-row md:space-x-4 md:text-left text-center mt-4 mb-4">
-                    <h2 className="text-white font-fredoka md:text-1xl text-sm md:ml-2">
-                      Sergio Martinez
-                    </h2>
-                    <h2 className="text-white font-fredoka md:text-1xl text-sm md:text-left">
-                      Licenciado en Psicología, Magister en Administración de
-                      Empresas
-                    </h2>
-                  </div>
-                  <a
-                    href="https://www.linkedin.com/in/sergiogabrielmartinez/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  >
-                    <img
-                      src="/linkedin.png"
-                      alt="Linkedin"
-                      className="w-full h-full object-contain"
-                    />
-                  </a>
-                </div>
-              </div>
-            </CardHeader>
-          </Card>
-        </motion.div>
+            <a
+              href="https://www.linkedin.com/in/sergiogabrielmartinez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
+              style={{
+                filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+              }}
+            >
+              <img
+                src="/linkedin.png"
+                alt="Linkedin"
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.5 }}
-          variants={cardVariant}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          whileHover={{
-            scale: 1.01,
-            boxShadow: "0 0 18px rgba(232, 20, 184, 0.5)",
-            transition: { duration: 0.2 },
-          }}
-          className="md:w-full w-6/6 md:mb-0 m-auto md:p-4 p-2 shadow-xl rounded-3xl border-2 border-secondary border-opacity-40 mb-0"
-        >
-          <Card
-            isBlurred
-            className=""
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-4"
             style={{
               background:
-                "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
+                "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <CardHeader className="flex md:flex-row flex-col md:justify-between md:items-center md:space-x-2">
-              <div
-                className="flex md:flex-col md:w-1/5 md:ml-6 md:p-0 p-2 md:mb-0 mb-4 justify-center items-center rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
+            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+              <img
+                src="/personal-info.png"
+                alt="Personal"
+                className="md:w-12 md:h-12 w-auto h-8"
                 style={{
-                  background:
-                    "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
                 }}
-              >
-                <h3 className="md:text-3xl text-xl md:mt-3 font-fredoka text-center font-semibold text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
-                  Tutor
-                </h3>
+              />
+              <p className="text-white font-fredoka md:text-xl text-sm">
+                Tutor
+              </p>
+            </div>
 
-                <img
-                  src="/personal-info.png"
-                  alt="Personal"
-                  className="md:w-24 md:h-20 w-auto h-16"
-                  style={{
-                    filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
-                  }}
-                />
-              </div>
+            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+              <img
+                src="/marcelo.jpg"
+                alt="Marcelo"
+                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                style={{
+                  filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+                }}
+              />
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Marcelo Martinez
+              </p>
+            </div>
 
-              <div className="md:flex-row md:w-3/4 md:px-4 md:justify-between md:items-center md:space-x-2">
-                <div
-                  className="flex md:flex-row flex-col md:w-full md:p-4 p-2 md:justify-between md:items-center md:space-x-2 rounded-3xl border-2 border-warning border-opacity-40 shadow-l"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
-                  }}
-                >
-                  <img
-                    src="/marcelo.jpg"
-                    alt="Marcelo"
-                    className="md:w-auto md:h-24 w-20 h-20 mt-2 rounded-full md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  />
+            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-4">
+                Magister & International University Teacher, Business
+                Consultant, Scientific reviewer
+              </p>
+            </div>
 
-                  <div className="flex md:flex-row md:space-x-4 md:text-left text-center mt-4 mb-4">
-                    <h2 className="text-white font-fredoka md:text-1xl text-sm md:ml-2">
-                      Marcelo Martinez
-                    </h2>
-                    <h2 className="text-white font-fredoka md:text-1xl text-sm md:text-left">
-                      Mg. & Int. Univ. Teacher, Business Consultant, Scientific
-                      reviewer
-                    </h2>
-                  </div>
-                  <a
-                    href="https://www.linkedin.com/in/marcelomartinez-lr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
-                    style={{
-                      filter:
-                        "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
-                    }}
-                  >
-                    <img
-                      src="/linkedin.png"
-                      alt="Linkedin"
-                      className="w-full h-full object-contain"
-                    />
-                  </a>
-                </div>
-              </div>
-            </CardHeader>
-          </Card>
-        </motion.div>
+            <a
+              href="https://www.linkedin.com/in/marcelomartinez-lr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
+              style={{
+                filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+              }}
+            >
+              <img
+                src="/linkedin.png"
+                alt="Linkedin"
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </motion.div>
+        </div>
       </motion.div>
 
       <motion.div
