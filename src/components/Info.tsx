@@ -10,6 +10,8 @@ import {
   TableRow,
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useLocation } from "react-router";
 
 const cardVariant = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -25,6 +27,17 @@ const cardVariant = {
 };
 
 const Team = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div>
       <motion.div
@@ -53,6 +66,7 @@ const Team = () => {
       </motion.div>
 
       <motion.div
+        id="el-curso"
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.3 }}
@@ -251,6 +265,7 @@ const Team = () => {
       </motion.div>
 
       <motion.div
+        id="ediciones"
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.3 }}
@@ -392,6 +407,7 @@ const Team = () => {
       </motion.div>
 
       <motion.div
+        id="contacto"
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.3 }}

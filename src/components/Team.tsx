@@ -1,10 +1,11 @@
 //import { Button } from "@nextui-org/react";
 //import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Divider } from "@nextui-org/react";
 import Icon from "@mdi/react";
 import { mdiChevronLeftCircle, mdiChevronRightCircle } from "@mdi/js";
+import { useLocation } from "react-router";
 
 const cardVariant = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -27,6 +28,16 @@ const sponsors = [
 
 const Team = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % sponsors.length);
@@ -41,6 +52,7 @@ const Team = () => {
   return (
     <div>
       <motion.div
+        id="historia"
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.5 }}
@@ -94,6 +106,7 @@ const Team = () => {
       </motion.div>
 
       <motion.div
+        id="profesionales"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1, ease: "easeInOut" }}
@@ -514,6 +527,7 @@ const Team = () => {
       </motion.div>
 
       <motion.div
+        id="auspiciantes"
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.5 }}
