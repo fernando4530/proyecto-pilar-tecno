@@ -6,9 +6,9 @@ import {
   CardBody,
   CardHeader,
   Divider,
-  Link,
 } from "@nextui-org/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const cardVariant = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -25,6 +25,16 @@ const cardVariant = {
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <div>
@@ -82,7 +92,10 @@ const LandingPage = () => {
         </motion.div>
       </div>
 
-      <div className="flex md:flex-row flex-col justify-center items-center m-auto md:space-x-16 md:mb-80 md:w-5/6">
+      <div
+        id="promocion"
+        className="flex md:flex-row flex-col justify-center items-center m-auto md:space-x-16 md:mb-80 md:w-5/6"
+      >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
@@ -298,6 +311,7 @@ const LandingPage = () => {
 
       <div className="md:mt-0 mt-24">
         <motion.div
+          id="porque-pilar-tecno"
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.5 }}
@@ -354,7 +368,10 @@ const LandingPage = () => {
           </h2>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row justify-center m-auto md:space-x-16 md:mb-64 mb-32 md:w-4/6">
+        <div
+          id="beneficios"
+          className="flex flex-col md:flex-row justify-center m-auto md:space-x-16 md:mb-64 mb-32 md:w-4/6"
+        >
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -644,148 +661,93 @@ const LandingPage = () => {
           <div className="max-w-6xl md:mx-auto px-4 md:mb-20 mb-12">
             <div className="flex flex-wrap justify-between">
               <div className="w-full flex items-center justify-center mb-8 md:mb-0 md:w-1/5">
-                <span className=" text-white">Pilar Tecno 2024</span>
+                <span className=" text-white">Pilar Tecno 2025</span>
               </div>
-
               <div className="w-1/2 md:w-1/5 mb-8 md:mb-0 text-center">
-                <h5 className="text-secondary-600 font-bold mb-4">LEGAL</h5>
+                <h5 className="text-secondary-600 font-bold mb-4">Inicio</h5>
                 <ul className="list-none pl-0 space-y-2">
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/#promocion"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      Terms
+                      Promoción
                     </Link>
                   </li>
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/#porque-pilar-tecno"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      Privacy
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="w-1/2 md:w-1/5 mb-8 md:mb-0 text-center">
-                <h5 className="text-secondary-600 font-bold mb-4">LINKS</h5>
-                <ul className="list-none pl-0 space-y-2">
-                  <li>
-                    <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
-                    >
-                      Faq
+                      ¿Por qué Pilar Tecno?
                     </Link>
                   </li>
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/#beneficios"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      Help
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
-                    >
-                      Support
+                      Beneficios
                     </Link>
                   </li>
                 </ul>
               </div>
 
               <div className="w-1/2 md:w-1/5 mb-8 md:mb-0 text-center">
-                <h5 className="text-secondary-600 font-bold mb-4">SOCIAL</h5>
+                <h5 className="text-secondary-600 font-bold mb-4">Equipo</h5>
                 <ul className="list-none pl-0 space-y-2">
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/team#historia"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      LikedIn
+                      Historia
                     </Link>
                   </li>
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/team#profesionales"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      Facebook
+                      Profesionales
                     </Link>
                   </li>
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/team#auspiciantes"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      Twitter
+                      Auspiciantes
                     </Link>
                   </li>
                 </ul>
               </div>
 
               <div className="w-1/2 md:w-1/5 text-center">
-                <h5 className="text-secondary-600 font-bold mb-4">COMPANY</h5>
+                <h5 className="text-secondary-600 font-bold mb-4">info</h5>
                 <ul className="list-none pl-0 space-y-2">
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/info#el-curso"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      Official Blog
+                      El curso
                     </Link>
                   </li>
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/info#ediciones"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      About Us
+                      Ediciones
                     </Link>
                   </li>
                   <li>
                     <Link
-                      isBlock
-                      showAnchorIcon
-                      href="#"
-                      color="secondary"
-                      className="text-white"
+                      to="/info#contacto"
+                      className="text-white hover:underline cursor-pointer"
                     >
-                      Contact
+                      Contacto
                     </Link>
                   </li>
                 </ul>
