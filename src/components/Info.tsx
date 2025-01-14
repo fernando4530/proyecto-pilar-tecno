@@ -307,13 +307,16 @@ const Team = () => {
             }}
           >
             <div className="flex md:flex-row flex-row items-center md:justify-center justify-between">
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
-                <p className="text-white font-fredoka md:text-xl text-sm">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-3 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
+                <p className="text-white font-fredoka md:text-l text-sm">
                   Primera Edición
                 </p>
+                <p className="text-white font-fredoka md:text-l text-sm">
+                  Febrero de 2021
+                </p>
               </div>
 
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
                   Finalizada
                 </p>
@@ -321,13 +324,16 @@ const Team = () => {
             </div>
 
             <div className="flex md:flex-row flex-row items-center md:justify-center justify-between">
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
-                <p className="text-white font-fredoka md:text-xl text-sm">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-3 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
+                <p className="text-white font-fredoka md:text-l text-sm">
                   Segunda Edición
                 </p>
+                <p className="text-white font-fredoka md:text-l text-sm">
+                  Octubre de 2021
+                </p>
               </div>
 
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
                   Finalizada
                 </p>
@@ -335,13 +341,16 @@ const Team = () => {
             </div>
 
             <div className="flex md:flex-row flex-row items-center md:justify-center justify-between">
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
-                <p className="text-white font-fredoka md:text-xl text-sm">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-3 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
+                <p className="text-white font-fredoka md:text-l text-sm">
                   Tercera Edición
                 </p>
+                <p className="text-white font-fredoka md:text-l text-sm">
+                  Agosto de 2022
+                </p>
               </div>
 
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
                   Finalizada
                 </p>
@@ -349,13 +358,16 @@ const Team = () => {
             </div>
 
             <div className="flex md:flex-row flex-row items-center md:justify-center justify-between">
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
-                <p className="text-white font-fredoka md:text-xl text-sm">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-3 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
+                <p className="text-white font-fredoka md:text-l text-sm">
                   Cuarta Edición
                 </p>
+                <p className="text-white font-fredoka md:text-l text-sm">
+                  Febrero de 2023
+                </p>
               </div>
 
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
                   Finalizada
                 </p>
@@ -363,13 +375,16 @@ const Team = () => {
             </div>
 
             <div className="flex md:flex-row flex-row items-center md:justify-center justify-between">
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
-                <p className="text-white font-fredoka md:text-xl text-sm">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-3 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
+                <p className="text-white font-fredoka md:text-l text-sm">
                   Quinta Edición
+                </p>
+                <p className="text-white font-fredoka md:text-l text-sm">
+                  Agosto de 2024
                 </p>
               </div>
 
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-warning bg-opacity-40 shadow-xl">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-warning bg-opacity-40 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
                   En Curso
                 </p>
@@ -377,13 +392,13 @@ const Team = () => {
             </div>
 
             <div className="flex md:flex-row flex-row items-center md:justify-center justify-between">
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
                   Sexta Edición
                 </p>
               </div>
 
-              <div className="md:w-1/3 rounded-2xl md:p-4 p-2 bg-success bg-opacity-40 shadow-xl">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-success bg-opacity-40 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
                   Próximamente
                 </p>
@@ -450,41 +465,54 @@ const Team = () => {
             </p>
           </div>
 
-          <div className="flex md:flex-row flex-col md:items-center justify-center items-start md:space-x-24">
-            <div className="flex md:flex-col items-center md:p-8 md:ml-24">
-              <img
-                src="/linkedin.png"
-                alt="Linkedin"
-                className=" md:w-14 md:h-14 w-14 h-14 md:mb-2 ml-1"
+          <div className="flex md:flex-row flex-col items-center justify-center md:space-x-24">
+            <div className="flex md:flex-col md:p-8 md:ml-24">
+              <a
+                href="https://www.linkedin.com/company/pilar-tecno/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Visitar perfil de LinkedIn"
+                className="hover:opacity-80 transition-opacity"
                 style={{ zIndex: 10 }}
-              />
-              <p className="text-white font-nunito text-l text-center ml-1">
-                Pilar Tecno
-              </p>
+              >
+                <img
+                  src="/linkedin.png"
+                  alt="LinkedIn"
+                  className="md:w-20 md:h-20 w-14 h-14 md:mb-2 ml-1"
+                />
+              </a>
             </div>
 
-            <div className="flex md:flex-col items-center md:p-8">
-              <img
-                src="/gmail.png"
-                alt="Gmail"
-                className=" md:w-16 md:h-16 w-16 h-16"
+            <div className="flex md:flex-col md:p-8">
+              <a
+                href="mailto:fagonzalez.nt@gmail.com"
+                title="Enviar correo"
+                className="hover:opacity-80 transition-opacity"
                 style={{ zIndex: 10 }}
-              />
-              <p className="text-white font-nunito text-l text-center">
-                fagonzalez.nt@gmail.com
-              </p>
+              >
+                <img
+                  src="/gmail.png"
+                  alt="Gmail"
+                  className="md:w-24 md:h-24 w-16 h-16"
+                />
+              </a>
             </div>
 
-            <div className="flex md:flex-col items-center md:p-8">
-              <img
-                src="/whatsapp.png"
-                alt="Whatsapp"
-                className=" md:w-16 md:h-16 w-16 h-16"
+            <div className="flex md:flex-col md:p-8">
+              <a
+                href="https://wa.me/2612517917"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Contactar por WhatsApp"
+                className="hover:opacity-80 transition-opacity"
                 style={{ zIndex: 10 }}
-              />
-              <p className="text-white font-nunito text-l text-center">
-                261-2517917
-              </p>
+              >
+                <img
+                  src="/whatsapp.png"
+                  alt="WhatsApp"
+                  className="md:w-24 md:h-24 w-16 h-16"
+                />
+              </a>
             </div>
           </div>
         </div>
