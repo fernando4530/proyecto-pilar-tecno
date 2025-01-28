@@ -1,6 +1,7 @@
 import {
   Accordion,
   AccordionItem,
+  Button,
   Divider,
   Table,
   TableBody,
@@ -11,7 +12,9 @@ import {
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
+import Icon from "@mdi/react";
+import { mdiArrowRight } from "@mdi/js";
 
 const cardVariant = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -28,6 +31,7 @@ const cardVariant = {
 
 const Team = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (location.hash) {
@@ -392,17 +396,21 @@ const Team = () => {
             </div>
 
             <div className="flex md:flex-row flex-row items-center md:justify-center justify-between">
-              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
-                <p className="text-white font-fredoka md:text-xl text-sm">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 py-2 bg-black bg-opacity-30 md:mr-8 shadow-xl">
+                <p className="text-white font-fredoka md:text-xl text-xs">
                   Sexta Edición
                 </p>
               </div>
 
-              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-success bg-opacity-40 shadow-xl">
+              <Button
+                onClick={() => navigate("/registration")}
+                className="flex flex-row md:w-1/3 items-center justify-center rounded-2xl md:py-7 p-2 bg-success bg-opacity-40 shadow-xl hover:opacity-80 transition-all"
+              >
                 <p className="text-white font-fredoka md:text-xl text-sm">
                   Próximamente
                 </p>
-              </div>
+                <Icon path={mdiArrowRight} color="white" size={1} />
+              </Button>
             </div>
           </div>
         </div>
