@@ -110,8 +110,14 @@ const Navbar = () => {
         </NavbarContent>
       </NextUINavbar>
       {location.pathname !== "/registration" && (
-        <div className="flex flex-row items-center md:justify-end md:p-4 p-1 fixed md:top-32 top-28 md:right-12 right-5 -right-0 z-10 rounded-2xl border-2 border-warning border-opacity-40 bg-secondary bg-opacity-30">
-          <p className="font-fredoka font-semibold md:text-xl text-xs md:mr-6 mr-2 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1, ease: "easeInOut" }}
+          className="flex flex-row items-center md:justify-end md:p-2 p-1 fixed md:top-32 top-24 md:right-24 right-6 -right-0 z-10 rounded-xl bg-white"
+          style={{ zIndex: 50 }}
+        >
+          <p className="font-fredoka font-semibold md:text-md text-xs md:mr-4 mr-2 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
             Nueva Edición
             <br />
             Próximamente
@@ -125,13 +131,14 @@ const Navbar = () => {
             }}
             whileTap={{ scale: 0.9 }}
             href="#"
-            variant="bordered"
-            className="md:text-sm text-xs md:rounded-2xl rounded-xl font-fredoka md:py-6 py-4 md:px-4 px-1 text-white border-opacity-20 hover:border-opacity-70 bg-opacity-20 text-opacity-60 hover:text-white hover:bg-white hover:bg-opacity-5"
+            variant="solid"
+            color="secondary"
+            className="md:text-sm text-xs text-bold md:rounded-2xl rounded-xl font-nunito md:py-6 py-4 md:px-4 px-1 text-white"
             onClick={() => navigate("/registration")}
           >
             Saber Más
           </NextUIButton>
-        </div>
+        </motion.div>
       )}
     </>
   );
