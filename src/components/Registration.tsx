@@ -78,6 +78,7 @@ const Registration = () => {
                 }}
                 whileTap={{ scale: 0.9 }}
                 href="#"
+                isDisabled
                 variant="bordered"
                 className="md:text-xl text-l rounded-2xl font-fredoka font-light py-6 md:px-4 px-2 text-white border-opacity-20 hover:border-opacity-70 bg-opacity-20 text-opacity-60 hover:text-white hover:bg-white hover:bg-opacity-5"
                 onClick={() => navigate("/")}
