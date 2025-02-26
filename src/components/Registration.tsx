@@ -1,10 +1,7 @@
 import { Button as NextUIButton } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
-  const navigate = useNavigate();
-
   return (
     <div>
       <div className="flex flex-col md:w-4/5 w-5/6 md:mt-16 mt-0 m-auto p-8 space-y-8">
@@ -78,10 +75,14 @@ const Registration = () => {
                 }}
                 whileTap={{ scale: 0.9 }}
                 href="#"
-                isDisabled
                 variant="bordered"
                 className="md:text-xl text-l rounded-2xl font-fredoka font-light py-6 md:px-4 px-2 text-white border-opacity-20 hover:border-opacity-70 bg-opacity-20 text-opacity-60 hover:text-white hover:bg-white hover:bg-opacity-5"
-                onClick={() => navigate("/")}
+                onClick={() =>
+                  window.open(
+                    "https://docs.google.com/forms/d/e/1FAIpQLSe0RkI_WGroiQ4zSY0nTaB3vNd5K7qP0FSpJUdc9Y6jWm4K8w/viewform?usp=sharing",
+                    "_blank"
+                  )
+                }
               >
                 Formulario de Inscripción
               </NextUIButton>
