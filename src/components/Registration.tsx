@@ -42,8 +42,8 @@ const Registration = () => {
             }}
           >
             <p className="text-white font-fredoka font-light md:text-xl text-sm">
-              En febrero arranca la 6ta Edición de Desarrollo Web de Pilar
-              Tecno!
+              En Marzo arrancamos la 6ta Edición del Curso de Desarrollo Web de
+              Pilar Tecno!
             </p>
             <p className="text-white font-fredoka font-light md:text-xl text-sm mb-12">
               Si estás interesado/a en participar, podés postularte a través del
@@ -75,8 +75,8 @@ const Registration = () => {
                 }}
                 whileTap={{ scale: 0.9 }}
                 href="#"
-                variant="bordered"
-                className="md:text-xl text-l rounded-2xl font-fredoka font-light py-6 md:px-4 px-2 text-white border-opacity-20 hover:border-opacity-70 bg-opacity-20 text-opacity-60 hover:text-white hover:bg-white hover:bg-opacity-5"
+                variant="solid"
+                className="md:text-xl text-l rounded-2xl font-fredoka font-semibold py-6 md:px-4 px-2 bg-secondary text-white border-opacity-20 hover:border-opacity-70 bg-opacity-80 text-opacity-80 hover:text-white hover:bg-secondary hover:bg-opacity-60"
                 onClick={() =>
                   window.open(
                     "https://docs.google.com/forms/d/e/1FAIpQLSe0RkI_WGroiQ4zSY0nTaB3vNd5K7qP0FSpJUdc9Y6jWm4K8w/viewform?usp=sharing",
