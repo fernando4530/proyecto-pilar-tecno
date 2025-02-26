@@ -114,10 +114,10 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 1, ease: "easeInOut" }}
-          className="flex flex-row items-center md:justify-end md:p-2 p-1 fixed md:top-32 top-24 md:right-24 right-6 -right-0 z-10 rounded-xl bg-white"
+          className="flex flex-row justify-end items-center w-full md:p-2 p-1 fixed z-10 bg-white "
           style={{ zIndex: 50 }}
         >
-          <p className="font-fredoka font-semibold md:text-md text-xs md:mr-4 mr-2 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
+          <p className="font-fredoka font-semibold md:text-xl text-xs md:mr-6 mr-5 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
             Nueva Edición
             <br />
             Próximamente
@@ -133,7 +133,7 @@ const Navbar = () => {
             href="#"
             variant="solid"
             color="secondary"
-            className="md:text-sm text-xs text-bold md:rounded-2xl rounded-xl font-nunito md:py-6 py-4 md:px-4 px-1 text-white"
+            className="md:text-sm text-xs text-bold md:rounded-2xl rounded-xl font-nunito md:py-6 py-4 md:px-4 px-1 text-white md:mr-16 mr-6"
             onClick={() => navigate("/registration")}
           >
             Saber Más
