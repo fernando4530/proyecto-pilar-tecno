@@ -114,10 +114,13 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 1, ease: "easeInOut" }}
-          className="flex flex-row justify-end items-center w-full md:p-2 p-1 fixed z-10 bg-white "
+          className="flex flex-row justify-center items-center w-full p-2 fixed z-10 bg-white "
           style={{ zIndex: 50 }}
         >
-          <p className="font-fredoka font-semibold md:text-xl text-xs md:mr-6 mr-5 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-yellow-400">
+          <p
+            className="font-fredoka font-semibold md:text-xl text-xs md:mr-6 mr-5 text-transparent bg-clip-text bg-gradient-to-l from-secondary to-[#a7613f]"
+            style={{ textShadow: "1px 1px 2px rgba(148, 146, 146, 0.4)" }}
+          >
             Nueva Edición
             <br />
             Próximamente
