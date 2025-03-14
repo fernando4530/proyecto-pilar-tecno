@@ -139,7 +139,7 @@ const Team = () => {
         </h2>
 
         <div
-          className="md:w-6/6 rounded-3xl border-2 border-warning border-opacity-40 md:p-4"
+          className="md:w-6/6 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 p-2 space-y-4"
           style={{
             background:
               "linear-gradient(to left, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
@@ -151,13 +151,13 @@ const Team = () => {
             viewport={{ amount: 0.5 }}
             variants={cardVariant}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mt-4 md:mb-8"
+            className="flex md:flex-row flex-col md:space-x-4 items-center md:justify-center rounded-3xl border-2 border-warning border-opacity-40 md:p-4 p-2 md:py-4 space-y-2 m-auto md:mt-4 md:mb-8"
             style={{
               background:
                 "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/5 w-2/5 items-center justify-center gap-2 rounded-2xl md:p-3 p-2 bg-black bg-opacity-30 shadow-xl md:-mb-2">
               <img
                 src="/personal-info.png"
                 alt="Personal"
@@ -171,11 +171,11 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/3 w-full items-center md:justify-start justify-center gap-2 rounded-2xl md:p-3 p-3 bg-secondary bg-opacity-30 shadow-xl">
               <img
                 src="/fernando.jpg"
                 alt="Fernando"
-                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                className="md:w-auto md:h-12 w-8 h-8 rounded-full"
                 style={{
                   filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
                 }}
@@ -185,8 +185,8 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
-              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+            <div className="flex md:flex-row md:w-2/5 w-full items-center justify-center rounded-2xl md:p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2 p-4">
                 Software Lead Engineer
               </p>
             </div>
@@ -214,13 +214,14 @@ const Team = () => {
             viewport={{ amount: 0.5 }}
             variants={cardVariant}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-8"
+            className="flex md:flex-row flex-col md:space-x-4 items-center md:justify-center rounded-3xl border-2 border-warning border-opacity-40 md:p-4 p-2 md:py-4 space-y-2 m-auto md:mt-4 md:mb-8"
             style={{
               background:
                 "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/5 w-2/5 items-center justify-center gap-2 rounded-2xl md:p-3 p-2 bg-black bg-opacity-30 shadow-xl md:-mb-2">
+              {" "}
               <img
                 src="/personal-info.png"
                 alt="Personal"
@@ -234,22 +235,22 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/3 w-full items-center md:justify-start justify-center gap-2 rounded-2xl md:p-3 p-3 bg-secondary bg-opacity-30 shadow-xl">
               <img
                 src="/brenda.jpg"
                 alt="Brenda"
-                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                className="md:w-auto md:h-12 w-8 h-8 rounded-full"
                 style={{
                   filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
                 }}
               />
               <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
-                Brenda Mollarer
+                Brenda Mollaret
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
-              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+            <div className="flex md:flex-row md:w-2/5 w-full items-center justify-center rounded-2xl md:p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2 p-4">
                 SSR Full Stack Developer
               </p>
             </div>
@@ -277,13 +278,14 @@ const Team = () => {
             viewport={{ amount: 0.5 }}
             variants={cardVariant}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-8"
+            className="flex md:flex-row flex-col md:space-x-4 items-center md:justify-center rounded-3xl border-2 border-warning border-opacity-40 md:p-4 p-2 md:py-4 space-y-2 m-auto md:mt-4 md:mb-8"
             style={{
               background:
                 "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/5 w-2/5 items-center justify-center gap-2 rounded-2xl md:p-3 p-2 bg-black bg-opacity-30 shadow-xl md:-mb-2">
+              {" "}
               <img
                 src="/personal-info.png"
                 alt="Personal"
@@ -297,11 +299,11 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/3 w-full items-center md:justify-start justify-center gap-2 rounded-2xl md:p-3 p-3 bg-secondary bg-opacity-30 shadow-xl">
               <img
                 src="/marianela.jpg"
                 alt="Marianela"
-                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                className="md:w-auto md:h-12 w-8 h-8 rounded-full"
                 style={{
                   filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
                 }}
@@ -311,8 +313,8 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
-              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+            <div className="flex md:flex-row md:w-2/5 w-full items-center justify-center rounded-2xl md:p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2 p-4">
                 SSR Frontend Developer
               </p>
             </div>
@@ -340,13 +342,14 @@ const Team = () => {
             viewport={{ amount: 0.5 }}
             variants={cardVariant}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-8"
+            className="flex md:flex-row flex-col md:space-x-4 items-center md:justify-center rounded-3xl border-2 border-warning border-opacity-40 md:p-4 p-2 md:py-4 space-y-2 m-auto md:mt-4 md:mb-8"
             style={{
               background:
                 "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/5 w-2/5 items-center justify-center gap-2 rounded-2xl md:p-3 p-2 bg-black bg-opacity-30 shadow-xl md:-mb-2">
+              {" "}
               <img
                 src="/personal-info.png"
                 alt="Personal"
@@ -360,11 +363,11 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/3 w-full items-center md:justify-start justify-center gap-2 rounded-2xl md:p-3 p-3 bg-secondary bg-opacity-30 shadow-xl">
               <img
                 src="/patricia.jpg"
                 alt="Patricia"
-                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                className="md:w-auto md:h-12 w-8 h-8 rounded-full"
                 style={{
                   filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
                 }}
@@ -374,8 +377,8 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
-              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+            <div className="flex md:flex-row md:w-2/5 w-full items-center justify-center rounded-2xl md:p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2 p-4">
                 Traductora Profesional
               </p>
             </div>
@@ -403,13 +406,14 @@ const Team = () => {
             viewport={{ amount: 0.5 }}
             variants={cardVariant}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-8"
+            className="flex md:flex-row flex-col md:space-x-4 items-center md:justify-center rounded-3xl border-2 border-warning border-opacity-40 md:p-4 p-2 md:py-4 space-y-2 m-auto md:mt-4 md:mb-8"
             style={{
               background:
                 "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/5 w-2/5 items-center justify-center gap-2 rounded-2xl md:p-3 p-2 bg-black bg-opacity-30 shadow-xl md:-mb-2">
+              {" "}
               <img
                 src="/personal-info.png"
                 alt="Personal"
@@ -423,11 +427,11 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/3 w-full items-center md:justify-start justify-center gap-2 rounded-2xl md:p-3 p-3 bg-secondary bg-opacity-30 shadow-xl">
               <img
                 src="/sergio.jpg"
                 alt="Sergio"
-                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                className="md:w-auto md:h-12 w-8 h-8 rounded-full"
                 style={{
                   filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
                 }}
@@ -437,8 +441,8 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
-              <p className="text-white font-fredoka md:text-md text-sm md:ml-8">
+            <div className="flex md:flex-row md:w-2/5 w-full items-center justify-center rounded-2xl md:p-2 bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm text-center md:p-2 p-4">
                 Licenciado en Psicología, Magister en Administración de Empresas
               </p>
             </div>
@@ -466,13 +470,14 @@ const Team = () => {
             viewport={{ amount: 0.5 }}
             variants={cardVariant}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="flex md:flex-row md:space-x-4 rounded-3xl border-2 border-warning border-opacity-40 md:p-4 md:py-4 m-auto md:mb-4"
+            className="flex md:flex-row flex-col md:space-x-4 items-center md:justify-center rounded-3xl border-2 border-warning border-opacity-40 md:p-4 p-2 md:py-4 space-y-2 m-auto md:mt-4 md:mb-8"
             style={{
               background:
                 "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
             }}
           >
-            <div className="flex md:flex-row md:w-1/5 items-center rounded-2xl md:p-4 p-2 bg-black bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/5 w-2/5 items-center justify-center gap-2 rounded-2xl md:p-3 p-2 bg-black bg-opacity-30 shadow-xl md:-mb-2">
+              {" "}
               <img
                 src="/personal-info.png"
                 alt="Personal"
@@ -486,11 +491,11 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-1/3 items-center rounded-2xl md:p-2 p-2 bg-secondary bg-opacity-30 shadow-xl">
+            <div className="flex md:flex-row md:w-1/3 w-full items-center md:justify-start justify-center gap-2 rounded-2xl md:p-3 p-3 bg-secondary bg-opacity-30 shadow-xl">
               <img
                 src="/marcelo.jpg"
                 alt="Marcelo"
-                className="md:w-auto md:h-12 w-8 h-8 mt-2 rounded-full"
+                className="md:w-auto md:h-12 w-8 h-8 rounded-full"
                 style={{
                   filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
                 }}
@@ -500,8 +505,8 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="flex md:flex-row md:w-2/5 items-center justify-center rounded-2xl md:p-2 p-2 bg-success bg-opacity-30 shadow-xl">
-              <p className="text-white font-fredoka md:text-md text-sm md:ml-4">
+            <div className="flex md:flex-row md:w-2/5 w-full items-center justify-center rounded-2xl bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm text-center md:p-4 p-4">
                 Magister & International University Teacher, Business
                 Consultant, Scientific reviewer
               </p>
