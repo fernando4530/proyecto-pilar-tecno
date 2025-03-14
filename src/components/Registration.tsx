@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const Registration = () => {
   return (
     <div>
-      <div className="flex flex-col md:w-4/5 w-5/6 md:mt-16 mt-0 m-auto p-8 space-y-8">
-        <div className="flex md:flex-row flex-col w-4/6 p-8 items-center justify-center m-auto  ">
+      <div className="flex flex-col m-auto p-8 space-y-8">
+        <div className="flex md:flex-row flex-col w-4/6 p-8 items-center justify-center m-auto ">
           <div>
             <img
               src="/girl-rocket.png"
@@ -28,7 +28,7 @@ const Registration = () => {
         </div>
 
         <div
-          className="flex md:flex-col flex-col md:w-4/6 w-6/6 md:p-12 p-4 items-center justify-center m-auto md:space-x-2 rounded-3xl"
+          className="flex md:flex-col flex-col md:w-3/6 w-6/6 md:p-12 p-4 items-center justify-center m-auto md:space-x-2 rounded-3xl"
           style={{
             background:
               "linear-gradient(to top, rgba(75, 0, 130, 0.1), rgba(128, 0, 128, 0.1), rgba(255, 192, 203, 0.1))",
