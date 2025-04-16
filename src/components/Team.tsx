@@ -528,6 +528,70 @@ const Team = () => {
               />
             </a>
           </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.5 }}
+            variants={cardVariant}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="flex md:flex-row flex-col md:space-x-4 items-center md:justify-center rounded-3xl border-2 border-warning border-opacity-40 md:p-4 p-2 md:py-4 space-y-2 m-auto md:mt-4 md:mb-8"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(75, 0, 130, 0.2), rgba(128, 0, 128, 0.2), rgba(255, 192, 203, 0.2))",
+            }}
+          >
+            <div className="flex md:flex-row md:w-1/5 w-2/5 items-center justify-center gap-2 rounded-2xl md:p-3 p-2 bg-black bg-opacity-30 shadow-xl md:-mb-2">
+              {" "}
+              <img
+                src="/personal-info.png"
+                alt="Personal"
+                className="md:w-12 md:h-12 w-auto h-8"
+                style={{
+                  filter: "drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.5))",
+                }}
+              />
+              <p className="text-white font-fredoka md:text-xl text-sm">
+                Tutor
+              </p>
+            </div>
+
+            <div className="flex md:flex-row md:w-1/3 w-full items-center md:justify-start justify-center gap-2 rounded-2xl md:p-3 p-3 bg-secondary bg-opacity-30 shadow-xl">
+              <img
+                src="/maria.jpeg"
+                alt="Maria"
+                className="md:w-auto md:h-12 w-8 h-8 rounded-full"
+                style={{
+                  filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+                }}
+              />
+              <p className="text-white font-fredoka md:text-md text-sm md:ml-2">
+                Maria Silvina Caamaño
+              </p>
+            </div>
+
+            <div className="flex md:flex-row md:w-2/5 w-full items-center justify-center rounded-2xl bg-success bg-opacity-30 shadow-xl">
+              <p className="text-white font-fredoka md:text-md text-sm text-center md:p-4 p-4">
+                Lic. en Administración, Contadora Pública Nacional
+              </p>
+            </div>
+
+            <a
+              href="https://www.linkedin.com/in/mar%C3%ADa-silvina-caama%C3%B1o/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex md:w-auto md:h-16 w-12 h-12 rounded-3xl md:m-0 m-auto"
+              style={{
+                filter: "drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5))",
+              }}
+            >
+              <img
+                src="/linkedin.png"
+                alt="Linkedin"
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </motion.div>
         </div>
       </motion.div>
 
