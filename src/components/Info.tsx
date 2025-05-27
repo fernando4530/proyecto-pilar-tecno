@@ -1,7 +1,7 @@
 import {
   Accordion,
   AccordionItem,
-  Button,
+  //Button,
   Divider,
   Table,
   TableBody,
@@ -12,9 +12,9 @@ import {
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router";
-import Icon from "@mdi/react";
-import { mdiArrowRight } from "@mdi/js";
+import { useLocation } from "react-router";
+//import Icon from "@mdi/react";
+//import { mdiArrowRight } from "@mdi/js";
 
 const cardVariant = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -31,7 +31,7 @@ const cardVariant = {
 
 const Team = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   useEffect(() => {
     if (location.hash) {
@@ -388,9 +388,9 @@ const Team = () => {
                 </p>
               </div>
 
-              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-warning bg-opacity-40 shadow-xl">
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-secondary bg-opacity-40 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
-                  En Curso
+                  Finalizada
                 </p>
               </div>
             </div>
@@ -402,15 +402,11 @@ const Team = () => {
                 </p>
               </div>
 
-              <Button
-                onClick={() => navigate("/registration")}
-                className="flex flex-row md:w-1/3 items-center justify-center rounded-2xl md:py-7 p-2 bg-success bg-opacity-40 shadow-xl hover:opacity-80 transition-all"
-              >
+              <div className="md:w-1/3 rounded-2xl text-center md:p-4 p-2 bg-warning bg-opacity-40 shadow-xl">
                 <p className="text-white font-fredoka md:text-xl text-sm">
-                  Próximamente
+                  En Curso
                 </p>
-                <Icon path={mdiArrowRight} color="white" size={1} />
-              </Button>
+              </div>
             </div>
           </div>
         </div>

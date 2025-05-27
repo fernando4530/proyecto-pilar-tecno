@@ -7,13 +7,13 @@ import {
   Button as NextUIButton,
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiAccountGroup, mdiLightbulbOn } from "@mdi/js";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+  //const location = useLocation();
 
   return (
     <>
@@ -109,7 +109,9 @@ const Navbar = () => {
           </NavbarItem>
         </NavbarContent>
       </NextUINavbar>
-      {location.pathname !== "/registration" && (
+      {/* location.pathname !== "/registration" && */}{" "}
+      {/* Comentamos la condición */}
+      {false && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
